@@ -8,4 +8,13 @@ import json
 from datetime import datetime as dt
 
 app = Flask(__name__)
-app.cinfig['SQLALCHEMY_DATABASE_URI'] ='sqlite:////db/chunks.db' 
+app.config['SQLALCHEMY_DATABASE_URI'] ='sqlite:////db/chunks.db' 
+# db.init_app(app)
+
+@app.route('/home/')
+def hello():
+	return "hellowwwwwe"
+
+
+if __name__ == "__main__":
+	app.run()
